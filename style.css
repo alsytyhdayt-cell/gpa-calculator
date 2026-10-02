@@ -1,0 +1,1074 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #F6F5FA;
+    color: #20202A;
+    transition: 0.3s ease;
+}
+
+button,
+input,
+select {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    height: 82px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(102, 88, 232, 0.08);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: #20202A;
+}
+
+.logo span {
+    color: #6658E8;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #696875;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #6658E8;
+}
+
+.theme-btn {
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #EFEDFF;
+
+    cursor: pointer;
+    font-size: 18px;
+
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+
+    padding: 80px 9%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 70px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border: 1px solid rgba(102, 88, 232, 0.10);
+
+    border-radius: 50%;
+
+    left: -160px;
+    top: 80px;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    border: 1px solid rgba(102, 88, 232, 0.10);
+
+    border-radius: 50%;
+
+    right: 8%;
+    top: 20px;
+}
+
+
+/* HERO TEXT */
+
+.hero-text {
+    max-width: 590px;
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    border-radius: 30px;
+
+    background: #ECE9FF;
+
+    color: #6658E8;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    margin-top: 22px;
+
+    font-size: clamp(45px, 6vw, 76px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    color: #6658E8;
+}
+
+.hero-text p {
+    margin-top: 25px;
+
+    max-width: 520px;
+
+    color: #777582;
+
+    font-size: 16px;
+
+    line-height: 2;
+}
+
+.main-btn {
+    margin-top: 32px;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 15px 24px;
+
+    background: #6658E8;
+    color: white;
+
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    box-shadow: 0 15px 35px rgba(102, 88, 232, 0.24);
+
+    transition: 0.3s;
+}
+
+.main-btn span {
+    font-size: 20px;
+}
+
+.main-btn:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   GPA CARD
+========================= */
+
+.hero-card {
+    width: 360px;
+    min-width: 360px;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 30px;
+
+    position: relative;
+    z-index: 2;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(35, 30, 70, 0.12);
+}
+
+.card-glow {
+    position: absolute;
+
+    width: 190px;
+    height: 190px;
+
+    background: #ECE9FF;
+
+    border-radius: 50%;
+
+    top: -90px;
+    right: -70px;
+
+    filter: blur(5px);
+
+    opacity: 0.8;
+}
+
+.card-top {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #92909C;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.status {
+    color: #6658E8;
+}
+
+.gpa-circle {
+    width: 215px;
+    height: 215px;
+
+    margin: 35px auto;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            white 57%,
+            transparent 58%
+        ),
+        conic-gradient(
+            #6658E8 0deg,
+            #6658E8 0deg,
+            #E8E5FA 0deg,
+            #E8E5FA 360deg
+        );
+
+    box-shadow:
+        0 15px 40px rgba(102, 88, 232, 0.10);
+}
+
+.circle-content {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.circle-content strong {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 45px;
+
+    color: #20202A;
+}
+
+.circle-content span {
+    color: #9997A3;
+    font-size: 12px;
+}
+
+.card-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.card-info div {
+    padding: 17px;
+
+    background: #F7F6FB;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.card-info strong {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 22px;
+
+    color: #20202A;
+}
+
+.card-info span {
+    color: #8B8995;
+    font-size: 12px;
+}
+
+
+/* =========================
+   CALCULATOR
+========================= */
+
+.calculator-section {
+    padding: 100px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    margin-top: 15px;
+
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.section-title p {
+    margin-top: 10px;
+
+    color: #85838F;
+
+    font-size: 14px;
+}
+
+
+/* TYPE BUTTONS */
+
+.calculator-type {
+    max-width: 430px;
+
+    margin: 0 auto 25px;
+
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: #EAE8F1;
+
+    border-radius: 15px;
+}
+
+.type-btn {
+    height: 48px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #777582;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.type-btn.active {
+    background: white;
+    color: #6658E8;
+
+    box-shadow: 0 5px 15px rgba(40, 35, 80, 0.08);
+}
+
+
+/* =========================
+   PREVIOUS DATA
+========================= */
+
+.previous-data {
+    max-width: 1050px;
+
+    margin: 0 auto 18px;
+}
+
+.previous-card {
+    padding: 22px 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(35, 30, 70, 0.06);
+}
+
+.previous-card label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777582;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.previous-card input {
+    width: 100%;
+    height: 50px;
+
+    border: 1px solid #E6E4EC;
+
+    border-radius: 13px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    background: #FBFAFD;
+
+    color: #30303A;
+
+    font-size: 14px;
+}
+
+.previous-card input:focus {
+    border-color: #6658E8;
+
+    box-shadow:
+        0 0 0 4px rgba(102, 88, 232, 0.08);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================
+   CALCULATOR BOX
+========================= */
+
+.calculator-box {
+    max-width: 1050px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 70px rgba(35, 30, 70, 0.08);
+}
+
+.courses-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.courses-header h3 {
+    font-size: 20px;
+}
+
+.courses-header span {
+    color: #94929E;
+    font-size: 12px;
+}
+
+.add-btn {
+    border: none;
+
+    padding: 12px 17px;
+
+    border-radius: 12px;
+
+    background: #F0EEFF;
+
+    color: #6658E8;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #E4E0FF;
+    transform: translateY(-2px);
+}
+
+
+/* COURSE */
+
+.course {
+    display: grid;
+
+    grid-template-columns: 1.8fr 1fr 1fr 52px;
+
+    gap: 12px;
+
+    margin-bottom: 12px;
+}
+
+.course input,
+.course select {
+    width: 100%;
+    height: 52px;
+
+    border: 1px solid #E6E4EC;
+
+    border-radius: 13px;
+
+    padding: 0 15px;
+
+    outline: none;
+
+    background: #FBFAFD;
+
+    color: #30303A;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.course input:focus,
+.course select:focus {
+    border-color: #6658E8;
+
+    box-shadow:
+        0 0 0 4px rgba(102, 88, 232, 0.08);
+}
+
+.delete-btn {
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    background: #FFF0F0;
+
+    color: #D45C5C;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #FFE0E0;
+}
+
+
+/* CALCULATE */
+
+.calculate-btn {
+    width: 100%;
+    height: 58px;
+
+    margin-top: 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: #6658E8;
+
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 35px rgba(102, 88, 232, 0.22);
+
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* RESULTS */
+
+.results {
+    display: grid;
+
+    grid-template-columns: 1.3fr 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+.result-card {
+    padding: 25px;
+
+    background: #F8F7FB;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+.result-card span {
+    display: block;
+
+    color: #85838F;
+
+    font-size: 13px;
+}
+
+.result-card strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 30px;
+
+    color: #20202A;
+}
+
+.result-card small {
+    color: #96949F;
+}
+
+.main-result {
+    background: #F0EEFF;
+}
+
+.main-result strong {
+    color: #6658E8;
+
+    font-size: 38px;
+}
+
+
+/* =========================
+   SCALE
+========================= */
+
+.scale-section {
+    padding: 80px 7%;
+}
+
+.scale-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 14px;
+}
+
+.scale-item {
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 17px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(35, 30, 70, 0.05);
+
+    transition: 0.3s;
+}
+
+.scale-item:hover {
+    transform: translateY(-4px);
+}
+
+.scale-item strong {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #6658E8;
+
+    font-size: 21px;
+}
+
+.scale-item span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #888692;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.about-line {
+    width: 70px;
+    height: 4px;
+
+    margin: 0 auto 25px;
+
+    border-radius: 10px;
+
+    background: #6658E8;
+}
+
+.about h2 {
+    margin-top: 15px;
+
+    font-size: 38px;
+    font-weight: 800;
+}
+
+.about p {
+    max-width: 600px;
+
+    margin: 15px auto;
+
+    color: #85838F;
+
+    line-height: 2;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 35px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+
+    border-top: 1px solid #E7E5EE;
+}
+
+.footer-brand p {
+    margin-top: 5px;
+
+    color: #96949F;
+
+    font-size: 12px;
+}
+
+.designed-by {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    color: #96949F;
+
+    font-size: 12px;
+}
+
+.designed-by strong {
+    color: #6658E8;
+
+    font-size: 15px;
+}
+
+.star {
+    color: #6658E8;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+    background: #111117;
+    color: #F5F4FA;
+}
+
+body.dark-mode .navbar {
+    background: rgba(20, 20, 27, 0.88);
+    border-color: rgba(255,255,255,0.06);
+}
+
+body.dark-mode .logo {
+    color: white;
+}
+
+body.dark-mode .navbar nav a {
+    color: #AAA8B5;
+}
+
+body.dark-mode .theme-btn {
+    background: #24232F;
+}
+
+body.dark-mode .hero-card,
+body.dark-mode .calculator-box,
+body.dark-mode .scale-item,
+body.dark-mode footer,
+body.dark-mode .previous-card {
+    background: #1A1A22;
+}
+
+body.dark-mode .course input,
+body.dark-mode .course select,
+body.dark-mode .previous-card input {
+    background: #202029;
+    border-color: #30303B;
+    color: white;
+}
+
+body.dark-mode .card-info div,
+body.dark-mode .result-card {
+    background: #22222C;
+}
+
+body.dark-mode .circle-content strong,
+body.dark-mode .card-info strong,
+body.dark-mode .result-card strong {
+    color: white;
+}
+
+body.dark-mode .section-title p,
+body.dark-mode .hero-text p,
+body.dark-mode .about p,
+body.dark-mode .courses-header span,
+body.dark-mode .previous-card label {
+    color: #A09EAA;
+}
+
+body.dark-mode footer {
+    border-color: #2A2933;
+}
+
+body.dark-mode .type-btn.active {
+    background: #24232F;
+}
+
+body.dark-mode .calculator-type {
+    background: #202029;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
+    }
+
+    .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 390px;
+        min-width: 0;
+    }
+
+    .course {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-name {
+        grid-column: span 2;
+    }
+
+    .delete-btn {
+        width: 100%;
+    }
+
+    .results {
+        grid-template-columns: 1fr;
+    }
+
+    .scale-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .calculator-section,
+    .scale-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .calculator-box {
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .previous-card {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .courses-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .course {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .course-name {
+        grid-column: span 2;
+    }
+
+    .scale-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section-title h2,
+    .about h2 {
+        font-size: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
